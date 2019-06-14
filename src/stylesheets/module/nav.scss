@@ -1,0 +1,27 @@
+
+$button-width: 6em;
+$button-height: 3em;
+
+%header-nav-styler{
+.header__nav{
+    @include flex-direction-wrap(row,wrap);
+    .header__nav__list{
+
+        @include flex-direction-wrap(row,wrap);
+        padding: 0em 2em 0.5em 5em;
+        
+        .header__nav__list__element{
+            width: $button-width;
+            height: $button-height;
+            margin:1.7em 0.3em 0em 0.3em;
+            border-radius: 20%;
+            text-align: center;
+            padding:1em;
+            background-color: alpha($color: #7b7d83);
+            color:white;
+            overflow: hidden;
+
+        }
+    }
+}
+}

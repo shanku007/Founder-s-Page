@@ -1,0 +1,25 @@
+
+
+$logo-wrapper-width: 8%;
+$logo-width: 100%;
+
+
+%header-logo-styler{
+.header__logo{
+    width: $logo-wrapper-width;
+    margin:0.4em 1em;
+
+
+    .fas{
+        width: $logo-width;
+        height: 60%;
+        font-size:3em;
+        padding:0.2em;
+        
+
+    }
+
+
+}
+
+}

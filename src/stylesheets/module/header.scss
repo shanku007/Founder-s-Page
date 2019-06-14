@@ -1,0 +1,14 @@
+/* Variable Declarations */
+
+
+
+.header{
+
+    @include flex-direction-wrap(row,nowrap);
+    justify-content: space-between;
+    @extend %header-logo-styler;
+    @extend %header-search-styler;
+    @extend %header-nav-styler;
+
+
+}

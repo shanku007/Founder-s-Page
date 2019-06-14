@@ -1,0 +1,25 @@
+
+%main-wrapper__left__word-container-styler{
+.main-wrapper__left__word-container{
+
+    @include flex-direction-wrap(column,nowrap);
+    font-size:3em;
+
+    .main-wrapper__left__word-container__blocks{
+
+        margin:0.2em;
+        padding: 0.5em;
+        @include flex-direction-wrap(column,nowrap);
+        background: grey;
+
+        .words{
+
+            
+            margin:0.1em;
+            margin-left: 1em;
+            color:white;
+        
+        }
+    }
+}
+}

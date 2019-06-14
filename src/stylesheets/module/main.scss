@@ -1,0 +1,46 @@
+// module inclusion
+
+$cards-width: 22em;
+$cards-height: 10em;
+$cards_margin:0.7em;
+$cards-padding: 0px;
+
+
+
+.main-wrapper {
+    .main-wrapper__right{
+
+    padding:0.2em;
+    .main-wrapper__right__cards{
+        border:1px solid black;
+        width: $cards-width;
+        height: $cards-height;
+        margin: $cards_margin;
+        padding: $cards-padding;
+        
+        
+    }
+
+    .main-wrapper__right__cards:nth-child(odd){
+
+        @include flex-direction-wrap(row,nowrap);
+        @include main-wrapper__right__cards-styler(right,left,right);
+        
+    
+    }
+    
+    
+    .main-wrapper__right__cards:nth-child(even){
+    
+        @include flex-direction-wrap(row-reverse,no-wrap);
+        @include main-wrapper__right__cards-styler(left,right,left)
+    }
+
+
+    
+}
+    .main-wrapper__left{
+        @extend %main-wrapper__left__word-container-styler;
+    }
+
+}

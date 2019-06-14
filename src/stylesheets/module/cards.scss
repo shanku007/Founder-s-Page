@@ -1,0 +1,107 @@
+// module inclusion 
+
+
+
+// Variable declaration
+
+$image-wrapper-width:40%;
+$details-wrapper-width:60%;
+$image-wrapper-height:auto;
+$details-wrapper-height:auto;
+$image-width: 100%;
+$image-height: 100%;
+$image-wrapper-margin: 0.1em;
+$details-wrapper-margin: .1em;
+$image-wrapper-padding: .6em;
+$details-wrapper-padding: 0em;
+
+
+@mixin main-wrapper__right__cards-styler($image-side,$details-side,$button-side){
+    
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: arial;
+    border-radius: 2em;
+
+
+    .main-wrapper__right__cards__image{
+        width: $image-wrapper-width;
+        margin-#{$image-side}: $image-wrapper-margin;
+        padding: $image-wrapper-padding;
+        img{
+            width: $image-width;
+            height: $image-height;
+            border-radius: 1em;
+        }
+    }
+
+    .main-wrapper__right__cards__details{
+
+        margin-#{$details-side}: $details-wrapper-margin;
+        padding: $details-wrapper-padding;
+        
+        h1{
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0.2em;
+            color:black;;
+        }
+        p.details__title{
+            color: grey;
+            font-size: 1em;
+            margin: 0.2em;
+}
+        }
+        p.details__university{
+            columns: #000000;;
+            font-size:1.2em;
+            margin:.3em;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.2em;
+            color: black;
+        }
+        ul{
+
+            display: flex;
+            margin: .1em;
+            padding: .1em;
+            
+            li{
+                margin:.2em;
+                width:1.5em;
+                height:1.5em;
+                padding:0.4em;
+                background: #d9e1e8;;
+                color: #2b90d9
+            }
+        }
+
+        .btn{
+            
+
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            margin: 0em -4em;
+            border-bottom-#{$button-side}-radius: 0.5em;
+        }
+    
+}
+
+    
+
+
+
+
+
+

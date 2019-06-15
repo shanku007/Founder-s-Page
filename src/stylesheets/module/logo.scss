@@ -1,25 +1,20 @@
-
-
 $logo-wrapper-width: 8%;
-$logo-width: 100%;
+$logo-font-size: ($header-height/100)*80;
 
 
-%header-logo-styler{
-.header__logo{
+.header__logo {
     width: $logo-wrapper-width;
-    margin:0.4em 1em;
+    margin: 0.2rem 0.5rem;
+    padding: 0.1rem 1rem;
 
 
-    .logo{
-        width: 100px;
-        height: 60%;
-        font-size:3em;
-        padding:0.2em;
-        
+    .logo {
+        padding: 0.1em;
+        font-size: $logo-font-size;
+        color: $accent-color;
+
 
     }
 
-
-}
 
 }

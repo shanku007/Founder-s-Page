@@ -3,68 +3,71 @@
 
 /*! Variable Declaration */
 
-$header-height : 8em;
-$header-position: default;
+$header-height : 3rem;
+$header-position: initial;
 $footer-height: 6em;
-$footer-position: auto;
+$footer-position: initial;
 $main-wrapper-width: 100%;
 $main-wrapper-height: auto;
 $main-wrapper__right-width: 80%;
-$main-wrapper__right-height: auto; 
+$main-wrapper__right-height: auto;
 $main-wrapper__left-width: 20%;
 $main-wrapper__left-height: auto;
 
-.header{
-    @if $header-position== fixed {
-        @include fixed-position-top-bottom-left-zero(fixed,top);
-        
+.header {
+    @if $header-position==fixed {
+        @include fixed-position-top-bottom-left-zero(fixed, top);
+
     }
-    height:$header-height;
     width:100%;
-    background: #a6e3e9;
-    padding: 1em;
-   
-    
+    height:$header-height;
+    background: $primary-color;
+
+
 }
 
 
-.footer{
+.footer {
     @if $footer-position==fixed {
-        @include fixed-position-top-bottom-left-zero(fixed,bottom);
+        @include fixed-position-top-bottom-left-zero(fixed, bottom);
     }
+
     height: $footer-height;
     width: 100%;
     background: #71c9ce;
 
 }
 
-.main-wrapper{
-    @include flex-direction-wrap(row,wrap);
+.main-wrapper {
+    @include flex-direction-wrap(row, wrap);
+
     @if $header-position==fixed {
         margin-top: $header-height + 1em;
-        
+
     }
-    @else{
+
+    @else {
         margin-top: 10px;
     }
-    position: relative;
-    .main-wrapper__left{
 
-        @include flex-direction-wrap(column,wrap);
+    position: relative;
+
+    .main-wrapper__left {
+
+        @include flex-direction-wrap(column, wrap);
         width: $main-wrapper__left-width;
         height: $main-wrapper__left-height;
         bottom: 0px;
 
     }
 
-    .main-wrapper__right{
+    .main-wrapper__right {
 
-        @include flex-direction-wrap(row,wrap);
-        
+        @include flex-direction-wrap(row, wrap);
+
         width: $main-wrapper__right-width;
-        
-        
+
+
     }
 
 }
-

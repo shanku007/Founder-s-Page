@@ -7,27 +7,31 @@ $list-elements-border: 0.001rem solid #{$divider-color};
     padding: 0.2rem 0.3rem;
     color: $primary-color-text;
     font-variant: historical-forms;
+    text-align: left;
     @include font-styler(400, $nav-element-font-size);
+
 }
 
 .header__nav {
-    .header__nav__list {
+    .header__nav__list{
         @include flex-direction-wrap(row, nowrap);
         margin: 0.3rem .2rem;
         padding: 0.2rem;
 
-        .header__nav__list__element {
-            @for $i from 1 through $list-elements-count {
-                @extend %header__nav__list__element;
+        .header__nav__list__links {
+            .header__nav__list__links__element {
+                @for $i from 1 through $list-elements-count {
+                    @extend %header__nav__list__element;
 
-                @if i !=1 {
-                    border-right: $list-elements-border;
+                    @if i !=1 {
+                        border-right: $list-elements-border;
+                    }
+
+
                 }
-
-
             }
-        }
 
+        }
     }
 }
 

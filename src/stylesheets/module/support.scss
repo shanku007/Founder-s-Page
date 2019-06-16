@@ -1,0 +1,16 @@
+.bottom-support-icon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: $accent-color;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.4rem;
+    border: 0.1rem solid $divider-color;
+    border-radius: 2rem;
+
+    .fa-headset {
+        font-size: 3rem;
+        color: $tetradic-color4;
+    }
+}

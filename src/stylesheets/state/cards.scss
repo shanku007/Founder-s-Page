@@ -1,12 +1,7 @@
+.main-wrapper--right__cards:hover {
 
-
-.main_wrapper{
-.main-wrapper__right{
-
-    .main-wrapper__right__cards:hover{
-
-        transform: scale(1.2);
+    transform: scale(1.01);
+    .main-wrapper--right__cards__image:hover{
+    	width:35%;
     }
-}
-
 }

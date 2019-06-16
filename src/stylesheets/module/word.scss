@@ -1,25 +1,21 @@
+.main-wrapper--left__word-container {
 
-%main-wrapper__left__word-container-styler{
-.main-wrapper__left__word-container{
+    @include flex-direction-wrap(column, nowrap);
+    @include font-styler(400, 4rem, serif);
+    width: 100%;
+    justify-content: space-around;
 
-    @include flex-direction-wrap(column,nowrap);
-    font-size:3em;
-
-    .main-wrapper__left__word-container__blocks{
-
-        margin:0.2em;
-        padding: 0.5em;
-        @include flex-direction-wrap(column,nowrap);
-        background: grey;
-
-        .words{
-
-            
-            margin:0.1em;
-            margin-left: 1em;
-            color:white;
+    .main-wrapper--left__word-container__blocks {
+        align-items: stretch;
+        @include flex-direction-wrap(column, nowrap);
         
+
+        .words {
+            margin: 0.1rem;
+            text-align: center;
+            background: $triadic-color3;
+            color: $primary-color-text;
+
         }
     }
-}
 }

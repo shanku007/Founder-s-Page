@@ -1,0 +1,10 @@
+.footer {
+    opacity: 0.9;
+    @include font-styler(500, 1rem);
+    text-align: center;
+    color: $primary-text-color;
+    padding: 0.8rem .6rem;
+    margin-top: 1rem;
+
+
+}

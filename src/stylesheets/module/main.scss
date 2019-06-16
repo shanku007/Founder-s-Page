@@ -1,11 +1,18 @@
-// module inclusion
+// // module inclusion
 
-
+$main-wrapper-left-width: 10%;
 
 .main-wrapper {
+    padding: 1rem;
 
-    .main-wrapper__left {
-        @extend %main-wrapper__left__word-container-styler;
+    .main-wrapper--left {
+        @include flex-direction-wrap(column, nowrap);
+        align-items: center;
+        width: $main-wrapper-left-width;
+    }
+
+    .main-wrapper--right {
+        @include flex-direction-wrap(row, wrap);
     }
 
 }

@@ -1,136 +1,216 @@
-// module inclusion 
+// // module inclusion 
 
 
 
-// Variable declaration
-$cards-width: 10rem;
-$cards-height:5rem;
-$cards-padding:0px;
-$cards_margin:0px;
-$image-wrapper-width:40%;
-$details-wrapper-width:60%;
-$image-wrapper-height:auto;
-$details-wrapper-height:auto;
-$image-width: 100%;
-$image-height: 100%;
-$image-wrapper-margin: 0.1em;
-$details-wrapper-margin: .1em;
-$image-wrapper-padding: .6em;
-$details-wrapper-padding: 0em;
+// // Variable declaration
+$cards-width: 30rem;
+$cards-image-wrapper-width:9rem;
+$cards-image-width: 100%;
+$cards-image-height:12rem;
+$cards-details-wrapper-width:18rem;
+$cards-border: 2rem solid #{divider-color};
+$social-media-icons: ('facebook',
+'twitter',
+'instagram',
+'linkedin'
+);
 
-
-@mixin main-wrapper__right__cards-styler($image-side, $details-side, $button-side) {
-
-
+@mixin cards-styler($margin-direction){
+    width: $cards-width;
+    margin: 0.5rem 1rem;
+    padding: 0.3rem 0.8rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-family: arial;
-    border-radius: 2em;
+    border: $cards-border;
+    border-radius: 1rem;
 
-
-    .main-wrapper__right__cards__image {
-        width: $image-wrapper-width;
-        margin-#{$image-side}: $image-wrapper-margin;
-        padding: $image-wrapper-padding;
+    .main-wrapper--right__cards__image {
+        width: $cards-image-wrapper-width;
 
         img {
-            width: $image-width;
-            height: $image-height;
-            border-radius: 1em;
+            width: $cards-image-width;
+            height: $cards-image-height;
+        }
+
+    }
+
+    .main-wrapper--right__cards__details {
+        flex-basis: $cards-details-wrapper-width;
+        margin-#{$margin-direction}: 0.3rem;
+        padding: 0.7rem 1rem;
+        @include flex-direction-wrap(column, nowrap);
+
+        .main-wrapper--right__cards__details__name {
+            @include font-styler(400, 2rem);
+            color: $primary-text-color;
+            margin-bottom: 0.4rem;
+        }
+
+        .main-wrapper--right__cards__details__title {
+            @include font-styler(300, 1.4rem);
+            color: $secondary-text-color;
+            margin-bottom: .2rem;
+        }
+
+        .main-wrapper--right__cards__details__university {
+            @include font-styler(300, 1.2rem);
+            color: $primary-text-color;
+            margin-bottom: .2rem;
+        }
+
+        .main-wrapper--right__cards__details__social-media {
+
+            @include flex-direction-wrap(row, nowrap);
+            padding: 0.2rem 0rem;
+            $i: 1;
+
+            @each $items in $social-media-icons {
+
+                .main-wrapper--right__cards__details__social-media--#{$items} {
+                    margin: 0.2rem 0.4rem;
+                    font-size: 1.4rem;
+                    color: #{nth($social-media-icons-color, $i)}
+                }
+
+                $i: $i+1;
+            }
+        }
+
+        .main-wrapper--right__cards__details__btn {
+
+
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 0.2rem 0.4rem;
+            color: $primary-color-text;
+            background-color: $primary-color;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            @include font-styler(300, 1.4rem);
+            margin-top: 0.8rem;
+            //border-bottom-#{$button-side}-radius: 0.5em;
         }
     }
 
-    .main-wrapper__right__cards__details {
-
-        margin-#{$details-side}: $details-wrapper-margin;
-        padding: $details-wrapper-padding;
-
-        h1 {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin: 0.2em;
-            color: black;
-            ;
-        }
-
-        p.details__title {
-            color: grey;
-            font-size: 1em;
-            margin: 0.2em;
-        }
-    }
-
-    p.details__university {
-        columns: #000000;
-        ;
-        font-size: 1.2em;
-        margin: .3em;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 1.2em;
-        color: black;
-    }
-
-    ul {
-
-        display: flex;
-        margin: .1em;
-        padding: .1em;
-
-        li {
-            margin: .2em;
-            width: 1.5em;
-            height: 1.5em;
-            padding: 0.4em;
-            background: #d9e1e8;
-            ;
-            color: #2b90d9
-        }
-    }
-
-    .btn {
-
-
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-        margin: 0em -4em;
-        border-bottom-#{$button-side}-radius: 0.5em;
-    }
-
-}
-
-
-.main-wrapper__right__cards {
-    border: 1px solid black;
-    width: $cards-width;
-    height: $cards-height;
-    margin: $cards_margin;
-    padding: $cards-padding;
-
-
-}
-
-.main-wrapper__right__cards:nth-child(odd) {
-
-    @include flex-direction-wrap(row, nowrap);
-    @include main-wrapper__right__cards-styler(right, left, right);
 
 
 }
 
 
-.main-wrapper__right__cards:nth-child(even) {
+// @mixin main-wrapper__right__cards-styler($image-side, $details-side, $button-side) {
 
-    @include flex-direction-wrap(row-reverse, no-wrap);
-    @include main-wrapper__right__cards-styler(left, right, left)
+
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//     text-align: center;
+//     font-family: arial;
+//     border-radius: 2em;
+
+
+//     .main-wrapper__right__cards__image {
+//         width: $image-wrapper-width;
+//         margin-#{$image-side}: $image-wrapper-margin;
+//         padding: $image-wrapper-padding;
+
+//         img {
+//             width: $image-width;
+//             height: $image-height;
+//             border-radius: 1em;
+//         }
+//     }
+
+//     .main-wrapper__right__cards__details {
+
+//         margin-#{$details-side}: $details-wrapper-margin;
+//         padding: $details-wrapper-padding;
+
+//         h1 {
+//             font-size: 1.5em;
+//             font-weight: bold;
+//             margin: 0.2em;
+//             color: black;
+//             ;
+//         }
+
+//         p.details__title {
+//             color: grey;
+//             font-size: 1em;
+//             margin: 0.2em;
+//         }
+//     }
+
+//     p.details__university {
+//         columns: #000000;
+//         ;
+//         font-size: 1.2em;
+//         margin: .3em;
+//     }
+
+//     a {
+//         text-decoration: none;
+//         font-size: 1.2em;
+//         color: black;
+//     }
+
+//     ul {
+
+//         display: flex;
+//         margin: .1em;
+//         padding: .1em;
+
+//         li {
+//             margin: .2em;
+//             width: 1.5em;
+//             height: 1.5em;
+//             padding: 0.4em;
+//             background: #d9e1e8;
+//             ;
+//             color: #2b90d9
+//         }
+//     }
+
+//     .btn {
+
+
+//         border: none;
+//         outline: 0;
+//         display: inline-block;
+//         padding: 8px;
+//         color: white;
+//         background-color: #000;
+//         text-align: center;
+//         cursor: pointer;
+//         width: 100%;
+//         font-size: 18px;
+//         margin: 0em -4em;
+//         border-bottom-#{$button-side}-radius: 0.5em;
+//     }
+
+// }
+
+
+// .main-wrapper__right__cards {
+//     border: 1px solid black;
+//     width: $cards-width;
+//     height: $cards-height;
+//     margin: $cards_margin;
+//     padding: $cards-padding;
+
+
+// }
+
+.main-wrapper--right__cards:nth-child(odd) {
+
+    @include flex-direction-wrap(row, wrap);
+    @include cards-styler(right);
+
+
+
+}
+
+
+.main-wrapper--right__cards:nth-child(even) {
+
+    @include flex-direction-wrap(row-reverse, wrap);
+    @include cards-styler(left);
 }

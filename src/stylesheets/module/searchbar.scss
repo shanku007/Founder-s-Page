@@ -13,7 +13,7 @@ $border: 0.01rem solid #{$divider-color};
         outline: none;
         border: $border;
         border-radius: 5px 0 0 5px;
-        background: #f4faf9;
+        background: white;
         transition: background 0.25s, box-shadow 0.25s;
     }
 
@@ -28,7 +28,7 @@ $border: 0.01rem solid #{$divider-color};
 
     .header__search-bar__button {
         width: 40px;
-        background: $primary-color-light;
+        background: $primary-color-complement;
         color: white;
         outline: none;
         border: none;

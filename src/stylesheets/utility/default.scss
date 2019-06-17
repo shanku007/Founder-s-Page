@@ -19,9 +19,3 @@
 }
 
 
-
-@mixin font-styler($font-weight: 400, $font-size: 1rem, $font-family: "Roboto") {
-    font-weight: $font-weight;
-    font-size: $font-size;
-    font-family: $font-family;
-}

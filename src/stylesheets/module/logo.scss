@@ -1,4 +1,4 @@
-$logo-wrapper-width: 8%;
+$logo-wrapper-width: 16%;
 $logo-font-size: ($header-height/100)*80;
 
 
@@ -7,14 +7,46 @@ $logo-font-size: ($header-height/100)*80;
     margin: 0.2rem 0.5rem;
     padding: 0.1rem 1rem;
 
-
     .logo {
         padding: 0.1em;
         font-size: $logo-font-size;
         color: $primary-color-text;
+        animation-name: logo-movement;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear //cubic-bezier(.79,.27,.1,.86);
 
 
     }
+
+    @keyframes logo-movement {
+
+        0% {
+            margin-left: 0rem;
+
+        }
+
+        25% {
+            margin-left: 2rem;
+        }
+
+        50% {
+            margin-left: 4rem;
+
+        }
+
+        75% {
+            margin-left: 6rem;
+        }
+
+        100% {
+            margin-left: 8rem;
+
+        }
+
+    }
+
 
 
 }

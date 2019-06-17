@@ -37,16 +37,14 @@ $footer-position: fixed;
     @include flex-direction-wrap(row, nowrap);
 
     @if $header-position==fixed {
-        margin-top: $header-height + 1rem;
+        margin-top: $header-height + 2rem;
 
     }
-
     @else {
-        margin-top: 0.8rem;
+        margin-top: 2rem;
     }
 
     width: 100%;
-    margin: 0.1rem;
 
     .main-wrapper__left {
 

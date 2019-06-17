@@ -4,6 +4,7 @@ $main-wrapper-left-width: 10%;
 
 .main-wrapper {
     padding: 1rem;
+    margin-bottom: $footer-height + 1rem;
 
     .main-wrapper--left {
         @include flex-direction-wrap(column, nowrap);

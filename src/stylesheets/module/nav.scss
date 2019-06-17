@@ -19,7 +19,7 @@ $list-elements-border: 0.001rem solid #{$divider-color};
         padding: 0.2rem;
 
         .header__nav__list__links {
-            .header__nav__list__links__element {
+            
                 @for $i from 1 through $list-elements-count {
                     @extend %header__nav__list__element;
 
@@ -33,7 +33,7 @@ $list-elements-border: 0.001rem solid #{$divider-color};
 
         }
     }
-}
+
 
 // %header-nav-styler{
 // .header__nav{

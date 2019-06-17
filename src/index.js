@@ -1,5 +1,6 @@
 import './stylesheets/index.scss';
 import './scripts/index.js';
+//import '../node_modules/animate.css/animate.css'
 
 
 import '@fortawesome/fontawesome-free/js/fontawesome'

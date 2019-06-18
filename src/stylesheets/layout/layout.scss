@@ -33,7 +33,7 @@ $footer-position: fixed;
 
 }
 
-.main-wrapper {
+.main-container {
     @include flex-direction-wrap(row, nowrap);
 
     @if $header-position==fixed {
@@ -46,13 +46,13 @@ $footer-position: fixed;
 
     width: 100%;
 
-    .main-wrapper__left {
+    .main-container__left {
 
         @include flex-direction-wrap(column, wrap);
 
     }
 
-    .main-wrapper__right {
+    .main-container__right {
 
         @include flex-direction-wrap(row, wrap);
 

@@ -2,7 +2,7 @@ $nav-element-font-size: 1.2em;
 $list-elements-count: 5;
 $list-elements-border: 0.001rem solid #{$divider-color};
 
-%header__nav__list__element {
+%navigation__list__element {
     margin: 0.2rem .4rem;
     padding: 0.2rem 0.3rem;
     color: $primary-color-text;
@@ -12,16 +12,16 @@ $list-elements-border: 0.001rem solid #{$divider-color};
 
 }
 
-.header__nav {
-    .header__nav__list{
+.navigation {
+    .navigation__list{
         @include flex-direction-wrap(row, nowrap);
         margin: 0.3rem .2rem;
         padding: 0.2rem;
 
-        .header__nav__list__links {
+        .navigation__list__elements__links {
             
                 @for $i from 1 through $list-elements-count {
-                    @extend %header__nav__list__element;
+                    @extend %navigation__list__element;
 
                     @if i !=1 {
                         border-right: $list-elements-border;
@@ -36,14 +36,14 @@ $list-elements-border: 0.001rem solid #{$divider-color};
 
 
 // %header-nav-styler{
-// .header__nav{
+// .navigation{
 //     @include flex-direction-wrap(row,wrap);
-//     .header__nav__list{
+//     .navigation__list{
 
 //         @include flex-direction-wrap(row,wrap);
 //         padding: 0em 2em 0.5em 5em;
 
-//         .header__nav__list__element{
+//         .navigation__list__element{
 //             width: $button-width;
 //             height: $button-height;
 //             margin:1.7em 0.3em 0em 0.3em;
